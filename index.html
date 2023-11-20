@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ol {
+            counter-reset: item;
+        }
+
+        li {
+            display: block
+        }
+
+        li:before {
+            content: counters(item, ".") ".) ";
+            counter-increment: item
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Heute lernen wir Git & Github etwas besser kennen</h1>
+    <ol>
+        <li>lokales Git-Repo erstellen ==> git init</li>
+        <li> Wie bereite ich Dateien vor ?
+            <ol>
+                <li>alle dateien/änderungen für die stating area vorbereiten ==> git add .</li>
+                <li>bestimmte datei/änderung für die stating area vorbereiten ==> git add "datei.name"</li>
+            </ol>
+        </li>
+        <li>stating area in das lokale git repo speichern ==> git commit -m "bitte etwas aussagekräftiges"</li>
+        <li>verbindung zwischen lokalem git repo und github repo erstellen ==> git remote add origin
+            "git@github.com:LinkZumGithubRepo"</li>
+        <li>einen main branch erstellen ==> git branch -M main</li>
+        <li>lokales git repo hochladen ins github repo ==> git push -u origin main</li>
+    </ol>
+    <h2>!!! Schritt 4 bis 6 bekommt ihr von GitHub nach erstellen eines Repositories dort !!!</h2>
+    <h3>Was ist ein branch ?</h3>
+    <p>Ein Branch ist ein seperates Arbeitsverzeichnis, die unabhängig voneinander existieren und bearbeitet werden
+        können. Wir haben aktuell nur mit dem main branch gearbeitet.</p>
+    <h3>Was ist ein repository ?</h3>
+    <p>Repository = Depot/Lager, hier werde alle von uns hinzugefügen Dateien gespeichert, um sie später gebündelt zu
+        haben.</p>
+    <h3>Was ist die stating area ?</h3>
+    <p>Ist wie ein Wartebereich beim Arzt, hier werden die von uns geänderten Dateien vorbereitet um ins Repository
+        zugelangen</p>
+</body>
+
+</html>
